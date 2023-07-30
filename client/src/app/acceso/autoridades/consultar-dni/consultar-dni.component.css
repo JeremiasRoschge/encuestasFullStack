@@ -16,6 +16,10 @@ background-size: cover;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+p {
+  color: #f5c6cb;
+}
   
   
     .container {
