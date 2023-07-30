@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-image: url("3.png");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos el 100% de la altura del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #000000;
+}
+
+.form-control {
+  border-radius: 5px;
+  background-color: #fff;
+  color: #ffffff;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #28a745; /* Modificar el color del botón según tus preferencias */
+  border-color: #28a745;
+}
+
+.btn-primary:hover {
+  background-color: #218838; /* Modificar el color del botón al hacer hover */
+  border-color: #218838;
+}
+
+.fa-lock {
+  margin-right: 10px;
+}
+
+.alert-danger {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos adicionales para la estructura de la página */
+
+/* Estilos para el pie de página */
+.footer {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+  font-size: 14px;
+}
