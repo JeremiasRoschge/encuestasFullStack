@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://kit.fontawesome.com/a076d05399.js" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1><i class="fas fa-lock"></i> Iniciar sesión</h1>
+    <form (ngSubmit)="onPostLogin()">
+      <div class="form-group">
+        <label for="login_dni"><i class="fas fa-user"></i> Usuario:</label>
+        <input type="text" id="login_dni" name="login_dni" class="form-control" required [(ngModel)]="login.dni">
+      </div>
+      <div class="form-group">
+        <label for="login_password"><i class="fas fa-lock"></i> Contraseña:</label>
+        <input type="password" id="login_password" name="login_password" class="form-control" required [(ngModel)]="login.password">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>Creado por <strong>Grupo PRoA</strong></p>
+    <p>&copy; 2023 Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
