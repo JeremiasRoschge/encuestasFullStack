@@ -23,7 +23,7 @@ namespace server.Controllers
         }
 
         [HttpPost]
-        [Route("api/Contador")]
+        [Route("api/Contador")] 
         public IHttpActionResult ActualizarContador([FromBody] ContadorRequest request)
         {
             try
