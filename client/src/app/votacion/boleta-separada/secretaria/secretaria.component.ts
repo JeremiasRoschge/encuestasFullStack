@@ -39,8 +39,16 @@ export class SecretariaComponent {
   constructor(private router: Router, public seleccionService: SeleccionService) {}
 
   selectOption(option: string) {
-    this.seleccionService.secretarySelection = option;
-    this.updateNextButtonState();
+    const presidentSelection = this.seleccionService['presidentSelection'];
+
+    // Verificar si la opción seleccionada para secretaria es diferente de la opción seleccionada para presidente
+    if (presidentSelection && presidentSelection === option) {
+      alert('No puedes seleccionar la misma lista para presidente y secretaria.');
+    } else {
+      // Actualizar la selección de secretaria solo si no es la misma que la selección de presidente
+      this.seleccionService.secretarySelection = option;
+      this.updateNextButtonState();
+    }
   }
 
   goBack() {
@@ -50,8 +58,6 @@ export class SecretariaComponent {
   nextPage(page: string) {
     if (page === 'summary') {
       if (this.seleccionService['secretarySelection']) {
-        // Guardar la selección en el servicio antes de navegar
-        this.seleccionService.secretarySelection = this.seleccionService['secretarySelection'];
         this.router.navigate(['/resumen'], {
           queryParams: {
             presidentSelection: this.seleccionService.presidentSelection,
@@ -63,7 +69,6 @@ export class SecretariaComponent {
       }
     }
   }
-    
 
   private updateNextButtonState() {
     const nextBtn = document.getElementById('nextBtn');
@@ -74,7 +79,6 @@ export class SecretariaComponent {
       nextBtn?.removeAttribute('disabled');
     } else if (presidentSelection && secretarySelection && presidentSelection === secretarySelection) {
       nextBtn?.setAttribute('disabled', 'true');
-      alert('No puedes seleccionar la misma lista para presidente y secretaria.');
     } else {
       nextBtn?.removeAttribute('disabled');
     }

@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
+  {path:'', component:VerificarDniComponent},
   {path:'home', component:HomeComponentComponent},
   {path:'login', component:LoginComponent},
   {path:'admin/dni', component: ConsultarDniComponent, canActivate: [AuthGuard]},

@@ -32,7 +32,7 @@ export class VerificarDniComponent {
           const count = Number(response.Count);
           const boletaCount = Number(response.BoletaCount);
 
-          if (count === 1 || boletaCount === 0) {
+          if (count === 1 || boletaCount === 1) {
             alert('Usted no puede votar porque ya ha emitido su voto.');
           } else if (response.Habilitado === 'si') {
             this.dniService.guardarDniConfirmado(this.dni); // Guardar el DNI confirmado en el Local Storage
