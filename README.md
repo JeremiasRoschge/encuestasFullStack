@@ -9,11 +9,11 @@ Sistema de encuestas electorales como proyecto final FullStack
 2. Clone the repository
 ```git clone https://github.com/influxdata/telegraf.git```
 
-###To run the server application follow the following steps
+### To run the server application follow the following steps
 1. ```cd server```
 2. Run the `server` solution
 
-###To run the client application follow the following steps
+### To run the client application follow the following steps
 1. ```cd client/src/app```
 2. ```npm install```
 3. Run `ng serve` or `npm start`
