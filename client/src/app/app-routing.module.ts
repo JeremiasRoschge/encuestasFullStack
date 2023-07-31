@@ -7,6 +7,8 @@ import { VerificarDniComponent } from './acceso/estudiantes/verificar-dni/verifi
 import { ElegirSistemaComponent } from "./votacion/elegir-sistema/elegir-sistema.component";
 import { ListaCompletaComponent } from './votacion/listaCompleta/presidencias/lista-completa.component';
 import { AuthGuard } from './auth.guard';
+import { FinalStepComponent } from './votacion/final-step/final-step.component';
+
 
 const routes: Routes = [
   {path:'home', component:HomeComponentComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [
   {path:'admin/dni', component: ConsultarDniComponent, canActivate: [AuthGuard]},
   {path:'empezar', component:VerificarDniComponent},
   {path:'sistema', component:ElegirSistemaComponent },
-  {path:'listaCompleta', component:ListaCompletaComponent}
+  {path:'listaCompleta', component:ListaCompletaComponent},
+  {path:'pasoFinal', component:FinalStepComponent},
 
 ];
 

@@ -16,7 +16,7 @@ export class LoginService {
   }
 
   postLogin(login: Login): Observable<string> {
-    // Agregar las cabeceras CORS necesarias
+    // Agregar las cabeceras CORS
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

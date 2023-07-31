@@ -31,6 +31,10 @@ namespace server.Models
                         resultado.Add("Curso", dr["curso"].ToString());
                         resultado.Add("ApellidoNombre", dr["apellido_nombre"].ToString());
                         resultado.Add("Habilitado", dr["habilitado"].ToString());
+
+                        // Obtener los valores de count y boleta_count
+                        resultado.Add("Count", dr["count"].ToString());
+                        resultado.Add("BoletaCount", dr["boleta_count"].ToString());
                     }
                     else
                     {
