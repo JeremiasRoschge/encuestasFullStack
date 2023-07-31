@@ -2,25 +2,25 @@
 <html>
 <head>
     <title>Verificar DNI</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <section>
-        <div class="form-box">
+      <div class="container custom-container">
+        <div class="form-group">
             <div class="form-value">
-                <form (submit)="verificarDNI()">
-                    <h2>Ingrese su DNI</h2>
+                <form (submit)="verificarDNI()" class="transparente">
+                    <h2 class="title">Ingrese su DNI</h2>
                     <div class="inputbox">
-                        <ion-icon name="card-outline"></ion-icon>
-                        <input type="text" [(ngModel)]="dni" name="dni" autocomplete="off" required>
-                        <label for="dni">DNI</label>
+                        <i class="fas fa-card card-outline"></i>
+                        <input type="text" [(ngModel)]="dni" name="dni" autocomplete="off" required placeholder="DNI">
+            
                     </div>
-                    <button type="submit">Accede a Votar</button>
+                    <button type="submit" class="btn btn-primary">Accede a Votar</button>
                 </form>
             </div>
         </div>
+      </div>
     </section>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
-
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 * {
     margin: 0;
@@ -10,17 +10,35 @@
 
 section {
     display: flex;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('background6.jpg') no-repeat center/cover;
+    background: url('1.png') no-repeat center/cover;
+}
+
+.custom-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.transparente {
+    background-color: transparent;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
     padding: 20px;
+}
+
+.title {
+    color: #fca4ff;
 }
 
 h1 {
@@ -60,4 +78,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
-}   
+}
