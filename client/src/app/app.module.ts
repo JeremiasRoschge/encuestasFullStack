@@ -12,7 +12,10 @@ import { ElegirSistemaComponent } from './votacion/elegir-sistema/elegir-sistema
 import { ListaCompletaComponent } from './votacion/listaCompleta/presidencias/lista-completa.component';
 import { FinalStepComponent } from './votacion/final-step/final-step.component';
 import { DniService } from './services/dni.services';
-import { BoletaSeparadaComponent } from './votacion/boleta-separada/boleta-separada.component';
+import { SeleccionService } from './services/seleccion.service';
+import { BoletaSeparadaComponent } from './votacion/boleta-separada/presidente/presidente-seleccion.component';
+import { SecretariaComponent } from './votacion/boleta-separada/secretaria/secretaria.component';
+import { ResumenComponent } from './votacion/boleta-separada/resumen/resumen.component';
 
 
 
@@ -25,7 +28,9 @@ import { BoletaSeparadaComponent } from './votacion/boleta-separada/boleta-separ
     ElegirSistemaComponent,
     ListaCompletaComponent,
     FinalStepComponent,
-    BoletaSeparadaComponent
+    BoletaSeparadaComponent,
+    SecretariaComponent,
+    ResumenComponent
   
   ],
   imports: [
@@ -35,7 +40,7 @@ import { BoletaSeparadaComponent } from './votacion/boleta-separada/boleta-separ
     [FormsModule], 
     IonicModule.forRoot()
   ],
-  providers: [DniService],
+  providers: [DniService, SeleccionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

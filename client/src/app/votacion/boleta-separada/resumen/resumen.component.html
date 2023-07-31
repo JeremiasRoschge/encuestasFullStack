@@ -1,0 +1,13 @@
+<div class="container">
+    <!-- ... (código previo del componente) ... -->
+  
+    <!-- Resumen de selecciones -->
+    <h1>Resumen de selecciones</h1>
+    <p>Presidente: {{ selections['presidentSelection'] }}</p>
+    <p>Secretaria: {{ selections['secretarySelection'] }}</p>
+  
+    <!-- Botones -->
+    <button class="btn btn-primary" (click)="changeSelection()">Cambiar selección</button>
+    <button class="btn btn-primary" (click)="sendVote()">Enviar voto</button>
+  </div>
+  

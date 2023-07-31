@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BoletaSeparadaComponent } from './boleta-separada.component';
+import { BoletaSeparadaComponent } from './presidente-seleccion.component';
 
 describe('BoletaSeparadaComponent', () => {
   let component: BoletaSeparadaComponent;

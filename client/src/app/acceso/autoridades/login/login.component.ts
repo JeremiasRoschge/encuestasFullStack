@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { LoginService } from "../../../services/login.service";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
