@@ -2,7 +2,7 @@
 Sistema de encuestas electorales como proyecto final FullStack
 
 
-##Build From Source
+## Build From Source
 
 1. Install all dependencies ([Visual Studio](https://visualstudio.microsoft.com/es/downloads/), [VSC](https://code.visualstudio.com/download), [Angular](https://angular.io/), [SQL Server](https://www.microsoft.com/es-ar/sql-server/sql-server-downloads), [ASP.NET Framework](https://dotnet.microsoft.com/en-us/apps/aspnet))
 
