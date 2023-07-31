@@ -11,7 +11,7 @@ Sistema de encuestas electorales como proyecto final FullStack
 
 ### To run the server application follow the following steps
 1. ```cd server```
-2. Install al dependencies usin NuGet
+2. Install all dependencies usin NuGet
 3. Run the `server` solution
 
 ### To run the client application follow the following steps
