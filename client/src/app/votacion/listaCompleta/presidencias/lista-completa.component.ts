@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { DniService } from '../../../services/dni.services';
 
 @Component({
   selector: 'app-lista-completa',
@@ -13,7 +14,8 @@ export class ListaCompletaComponent {
   selectedLista: string | null = null;
   resultadoConsulta: any;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private dniService: DniService) {}
+
 
   seleccionarLista(lista: string) {
     this.selectedLista = lista;
@@ -26,23 +28,27 @@ export class ListaCompletaComponent {
         .pipe(
           catchError((error: HttpErrorResponse) => {
             if (error.status === 404) {
-              alert('El DNI no existe'); // Mostrar alert si es error 404
+              alert('El DNI no existe');
             }
-            return throwError(error); // Continuar con el manejo del error
+            return throwError(error);
           })
         )
         .subscribe(
           (response) => {
             this.resultadoConsulta = response;
             if (response && response.Habilitado === 'si') {
-              this.actualizarContadorUsuario(dni); // Llamar a la función para incrementar el contador del usuario
+              const dniConfirmado = this.dniService.obtenerDniConfirmado();
+              if (dniConfirmado && dniConfirmado === dni) {
+                this.actualizarContadorUsuario(dni);
+              } else {
+                alert('El DNI ingresado no coincide con el del paso 1. Por favor, ingrese nuevamente su DNI.');
+              }
             } else {
               alert('Usted no está habilitado para votar, por favor hable con el presidente de mesa para ser habilitado.');
             }
           },
           (error) => {
             console.log(error);
-            // Error en la solicitud HTTP, redireccionar a error
             this.router.navigate(['/error']);
           }
         );

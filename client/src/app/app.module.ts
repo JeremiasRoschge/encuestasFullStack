@@ -11,6 +11,7 @@ import { IonicModule } from '@ionic/angular';
 import { ElegirSistemaComponent } from './votacion/elegir-sistema/elegir-sistema.component';
 import { ListaCompletaComponent } from './votacion/listaCompleta/presidencias/lista-completa.component';
 import { FinalStepComponent } from './votacion/final-step/final-step.component';
+import { DniService } from './services/dni.services';
 
 
 
@@ -32,7 +33,7 @@ import { FinalStepComponent } from './votacion/final-step/final-step.component';
     [FormsModule], 
     IonicModule.forRoot()
   ],
-  providers: [],
+  providers: [DniService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
