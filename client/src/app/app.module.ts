@@ -11,6 +11,11 @@ import { IonicModule } from '@ionic/angular';
 import { ElegirSistemaComponent } from './votacion/elegir-sistema/elegir-sistema.component';
 import { ListaCompletaComponent } from './votacion/listaCompleta/presidencias/lista-completa.component';
 import { FinalStepComponent } from './votacion/final-step/final-step.component';
+import { DniService } from './services/dni.services';
+import { SeleccionService } from './services/seleccion.service';
+import { BoletaSeparadaComponent } from './votacion/boleta-separada/presidente/presidente-seleccion.component';
+import { SecretariaComponent } from './votacion/boleta-separada/secretaria/secretaria.component';
+import { ResumenComponent } from './votacion/boleta-separada/resumen/resumen.component';
 
 
 
@@ -22,7 +27,10 @@ import { FinalStepComponent } from './votacion/final-step/final-step.component';
     VerificarDniComponent,
     ElegirSistemaComponent,
     ListaCompletaComponent,
-    FinalStepComponent
+    FinalStepComponent,
+    BoletaSeparadaComponent,
+    SecretariaComponent,
+    ResumenComponent
   
   ],
   imports: [
@@ -32,7 +40,7 @@ import { FinalStepComponent } from './votacion/final-step/final-step.component';
     [FormsModule], 
     IonicModule.forRoot()
   ],
-  providers: [],
+  providers: [DniService, SeleccionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

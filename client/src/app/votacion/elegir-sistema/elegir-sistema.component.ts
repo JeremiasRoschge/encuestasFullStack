@@ -17,7 +17,7 @@ export class ElegirSistemaComponent {
       if (this.selectedVotacion === 'completa') {
         window.location.href = '/listaCompleta';
       } else if (this.selectedVotacion === 'separado') {
-        window.location.href = '/ruta-de-votacion-separado';
+        window.location.href = '/presidencia';
       }
     } else {
       alert('Debes seleccionar una opción antes de continuar');

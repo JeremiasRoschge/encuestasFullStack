@@ -1,0 +1,34 @@
+<body>
+  <div class="container">
+    <h1>Elije Presidente</h1>
+    <div id="presidentSelection">
+      <div
+        class="card"
+        *ngFor="let candidato of candidatos"
+        [class.selected]="seleccionService.presidentSelection === candidato.nombre"
+        (click)="selectOption(candidato.nombre)"
+      >
+        <img [src]="candidato.logo" class="card-img-top" [alt]="candidato.nombre + ' Logo'">
+        <div class="card-body">
+          <h5 class="card-title">{{ candidato.nombre }}</h5>
+          <p class="card-text">Candidatos:</p>
+          <ul class="card-text">
+            <h5>{{ candidato.presidente }} - Presidente</h5>
+            <li>{{ candidato.vicepresidente }} - Vicepresidente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-dark" (click)="goBack()">Atrás</button>
+    <button
+    type="button"
+    class="btn btn-dark"
+    id="nextBtn"
+    (click)="nextPage('secretary')"
+    [disabled]="!seleccionService.presidentSelection"
+  >
+      Siguiente
+    </button>
+  </div>
+  
+</body>

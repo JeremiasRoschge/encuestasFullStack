@@ -18,7 +18,7 @@ export class ConsultarDniComponent {
   consultarDNI() {
     if (this.dni !== '') {
       // Realizar la solicitud HTTP al backend para consultar el DNI
-      this.http.get<any>(`https://localhost:44374/api/ConsultaDni/${this.dni}`)
+      this.http.get<any>(`https://localhost:44374/api/VerificarDNI/${this.dni}`)
         .subscribe(
           (response) => {
             this.resultadoConsulta = response;
