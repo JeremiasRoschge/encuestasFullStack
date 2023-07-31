@@ -87,7 +87,7 @@ export class ListaCompletaComponent {
         .subscribe(
           (partidoResponse) => {
             if (partidoResponse === 'success') {
-              // La actualización del contador del partido fue exitosa, cargar la página listo
+              // La actualización del contador del partido fue exitosa, cargar la página pasoFinal
               this.router.navigate(['/pasoFinal']);
             } else {
               // Error en la actualización del contador del partido, redireccionar a error

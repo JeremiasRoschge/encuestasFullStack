@@ -12,6 +12,7 @@ import { ElegirSistemaComponent } from './votacion/elegir-sistema/elegir-sistema
 import { ListaCompletaComponent } from './votacion/listaCompleta/presidencias/lista-completa.component';
 import { FinalStepComponent } from './votacion/final-step/final-step.component';
 import { DniService } from './services/dni.services';
+import { BoletaSeparadaComponent } from './votacion/boleta-separada/boleta-separada.component';
 
 
 
@@ -23,7 +24,8 @@ import { DniService } from './services/dni.services';
     VerificarDniComponent,
     ElegirSistemaComponent,
     ListaCompletaComponent,
-    FinalStepComponent
+    FinalStepComponent,
+    BoletaSeparadaComponent
   
   ],
   imports: [

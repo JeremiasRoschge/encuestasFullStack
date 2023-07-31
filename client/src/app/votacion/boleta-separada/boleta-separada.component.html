@@ -1,0 +1,42 @@
+<body>
+    <div class="container">
+      <h1>Elije Presidente</h1>
+      <div id="presidentSelection">
+        <div class="card" onclick="selectOption('Lista PEV', 'presidentSelection')">
+          <img src="2.png" class="card-img-top" alt="Logo Lista A">
+          <div class="card-body">
+  
+              <h5 class="card-title">Lista P.E.V</h5>
+              <p class="card-text">Candidatos:</p>
+              <ul class="card-text">
+                <h5>Bruno Buasso - Presidente </h5>
+                <li>Bruno Distefano - Vicepresidente </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" onclick="selectOption('Lista MIVP', 'presidentSelection')">
+          <img src="4.png" class="card-img-top" alt="Logo Lista B">
+          <div class="card-body">
+            <h5 class="card-title">Lista MIVP</h5>
+            <p class="card-text">Candidatos:</p>
+            <ul class="card-text">
+              <h5>Aldana Masnovo - Presidente </h5>
+              <li>Guadalupe Villanueva - Vicepresidente </li>
+          </ul>
+          </div>
+        </div>
+        <div class="card" onclick="selectOption('Voto en blanco', 'presidentSelection')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Blanco.svg/1200px-Blanco.svg.png" class="card-img-top" alt="Logo Voto en blanco">
+          <div class="card-body">
+            <h5 class="card-title">Voto en blanco</h5>
+            <p class="card-text">No se selecciona ningún candidato.</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-dark" onclick="goBack()">Atrás</button>
+      <button type="button" class="btn btn-dark" id="nextBtn" onclick="nextPage('secretary')" disabled>Siguiente</button>
+    </div>
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
