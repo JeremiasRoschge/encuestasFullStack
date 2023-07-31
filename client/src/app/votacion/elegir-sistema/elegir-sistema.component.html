@@ -1,0 +1,20 @@
+<body>
+    <div class="container">
+        <h1 class="title">Elige tu forma de votación</h1>
+      
+        <div class="option-card" (click)="seleccionarVotacion('completa')" [ngClass]="{'selected-card': selectedVotacion === 'completa'}">
+          <h2>Votar Lista Completa</h2>
+          <p>Votar por una lista completa de candidatos</p>
+          <h4>No se encuentra la opción de voto en blanco!</h4>
+        </div>
+      
+        <div class="option-card" (click)="seleccionarVotacion('separado')" [ngClass]="{'selected-card': selectedVotacion === 'separado'}">
+          <h2>Votar por Separado</h2>
+          <p>Votar de forma individual por cada cargo</p>
+          <h3>Se encuentra la posibilidad de poder votar en blanco!</h3>
+        </div>
+      
+        <button class="btn btn-primary btn-votar" (click)="siguientePagina()">Siguiente</button>
+      </div>
+      
+</body>

@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Web.Http;
 
-namespace TuProyecto.Controllers
+namespace server.Controllers
 {
     public class HabilitarUsuarioController : ApiController
     {

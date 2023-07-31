@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Web.Http;
 using server.Models;
 
@@ -7,7 +8,7 @@ namespace server.Controllers
     public class ConsultaDniController : ApiController
     {
         [HttpGet]
-        [Route("api/ConsultaDni/{dni}")]
+        [Route("api/VerificarDNI/{dni}")]
         public IHttpActionResult ConsultaDni(string dni)
         {
             try
@@ -17,7 +18,8 @@ namespace server.Controllers
 
                 if (resultado.ContainsKey("Error"))
                 {
-                    return NotFound();
+                    string mensaje = "Failed DNI";
+                    return Content(HttpStatusCode.OK, mensaje);
                 }
 
                 return Ok(resultado);

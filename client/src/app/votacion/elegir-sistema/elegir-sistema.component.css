@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+    body {
+        display: flex;
+      align-items: center;
+      background: url('7.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+    height: 100vh; /* Agrega una altura al contenedor */
+    }
+
+    .container {
+      max-width: 700px;
+      text-align: center;
+      padding: 20px;
+      background-color: #3e019a7c;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.05);
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .option-card {
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 80px;
+      border: 5px solid #ccc;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .option-card.selected-card {
+      border-color: #28a745;
+      background-color: #05a04b;
+      color: #fff;
+    }
+
+    .option-card:hover {
+      border-color: #007bff;
+      background-color: #00172e;
+    }
+
+    .btn-votar {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #007bff;
+      border-color: #5b88b7;
+      transition: all 0.3s ease;
+    }
+
+    .btn-votar:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+      transform: scale(1.05);
+    }
+    h2 {
+      color: #ffffff;
+    }
+    h3 {
+      color: #ffffff;
+    }
+    h4 {
+      color: #ffffff;
+    }
+    p {
+      color: #ffffff;
+    }

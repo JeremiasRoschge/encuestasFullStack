@@ -34,6 +34,10 @@ body {
   color: #000000;
 }
 
+h2 {
+  color: #e759ec
+}
+
 .form-group label {
   font-weight: bold;
   color: #000000;
