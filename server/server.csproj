@@ -208,12 +208,16 @@
     <Compile Include="Controllers\ContadorController.cs" />
     <Compile Include="Controllers\HabilitarUsuarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IncrementarBoletaCounterController.cs" />
+    <Compile Include="Controllers\IncrementarCountController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GestorConsultaDni.cs" />
+    <Compile Include="Models\GestorIncrementarBoletaCount.cs" />
+    <Compile Include="Models\GestorIncrementarCount.cs" />
     <Compile Include="Models\GestorLogin.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\LoginCredentials.cs" />

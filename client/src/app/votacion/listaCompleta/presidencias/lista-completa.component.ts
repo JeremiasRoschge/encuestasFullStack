@@ -35,7 +35,7 @@ export class ListaCompletaComponent {
           (response) => {
             this.resultadoConsulta = response;
             if (response && response.Habilitado === 'si') {
-              this.actualizarContador();
+              this.actualizarContadorUsuario(dni); // Llamar a la función para incrementar el contador del usuario
             } else {
               alert('Usted no está habilitado para votar, por favor hable con el presidente de mesa para ser habilitado.');
             }
@@ -51,16 +51,40 @@ export class ListaCompletaComponent {
     }
   }
 
-  actualizarContador() {
+  actualizarContadorUsuario(dni: string) {
     if (this.selectedLista) {
-      this.http.post<any>('https://localhost:44374/api/Contador', { lista: this.selectedLista })
+      this.http.post<any>('https://localhost:44374/api/IncrementarBoletaCount', { dni: dni })
         .subscribe(
           (contadorResponse) => {
             if (contadorResponse === 'success') {
-              // La actualización del contador fue exitosa, cargar la página listo
-              this.router.navigate(['/login']);
+              // La actualización del contador del usuario fue exitosa, incrementar el contador del partido
+              this.incrementarContadorPartido();
             } else {
-              // Error en la actualización del contador, redireccionar a error
+              // Error en la actualización del contador del usuario, redireccionar a error
+              this.router.navigate(['/error']);
+            }
+          },
+          (error) => {
+            console.log(error);
+            // Error en la solicitud HTTP, redireccionar a error
+            this.router.navigate(['/error']);
+          }
+        );
+    } else {
+      alert('Debes seleccionar una lista antes de enviar');
+    }
+  }
+
+  incrementarContadorPartido() {
+    if (this.selectedLista) {
+      this.http.post<any>('https://localhost:44374/api/Contador', { lista: this.selectedLista })
+        .subscribe(
+          (partidoResponse) => {
+            if (partidoResponse === 'success') {
+              // La actualización del contador del partido fue exitosa, cargar la página listo
+              this.router.navigate(['/pasoFinal']);
+            } else {
+              // Error en la actualización del contador del partido, redireccionar a error
               this.router.navigate(['/error']);
             }
           },
